@@ -9,7 +9,14 @@ function Step0({handleSteps, steps}) {
   return (
     <div>
         <h1>click the button to start</h1>
-        <Button variant="contained" onClick={()=>{handleConfirm(handleSteps, steps)}} >start</Button>
+        <Button 
+        variant="contained" 
+        onClick={()=>{handleConfirm(handleSteps, steps)}}
+        color="secondary"
+        sx={{
+          marginBottom: '10px'
+        }}
+        >start</Button>
     </div>
   )
 }

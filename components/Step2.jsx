@@ -19,9 +19,16 @@ function Step2({handleSteps, steps}) {
     }
   return (
     <>
-    <Box>
+    <Box
+    sx={{
+      margin:"20px"
+    }}
+    >
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label"
+          sx={{
+            color:'secondary.main'
+          }}
         >Truck</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -29,6 +36,10 @@ function Step2({handleSteps, steps}) {
           value={track}
           label="Truck"
           onChange={handleChange}
+          sx={{
+            bgcolor: "primary.contrastText",
+            margin: "10px"
+          }}
         >
           <MenuItem value={'JFK'}>JFK</MenuItem>
           <MenuItem value={'LHR'}>LHR</MenuItem>
@@ -38,7 +49,11 @@ function Step2({handleSteps, steps}) {
           <MenuItem value={'HKG '}>HKG </MenuItem>
         </Select>
       </FormControl>
-      <Button variant="contained" onClick={()=>{handleConfirm(handleSteps, steps)}} >Confirm</Button>
+      <Button color="secondary" variant="contained" onClick={()=>{handleConfirm(handleSteps, steps)}} 
+      sx={{
+        margin:'10px'
+      }}
+      >Confirm</Button>
     </Box>
     </>
   )

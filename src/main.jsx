@@ -6,8 +6,20 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 const theme = createTheme({
   palette: {
+    primary: {
+      light: '#555555',
+      main: '#6a6a6a',
+      dark: '#171717',
+      contrastText: '#fff',
+    },
+    secondary: {
+      light: '#ed4b82',
+      main: '#e91e63',
+      dark: '#a31545',
+      contrastText: '#000',
+    },
     background: {
-      default: '#454545', // Tutaj możesz ustawić kolor tła body
+      default: '#373737', 
     },
   },
 });
@@ -17,8 +29,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
      <ThemeProvider theme={theme}>
      <CssBaseline />
       <Box sx={{
-        bgcolor:'background.default',
-        color: "#FEFEFE"
+        bgcolor:'primary.dark',
+        color: "primary.contrastText",
+        border: 1
       }}
        >
           <App />

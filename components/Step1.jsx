@@ -22,9 +22,15 @@ function Step1({handleSteps, steps}) {
   
   return (
     <>
-    <Box>
-      <FormControl fullWidth>
+    <Box sx={{
+      margin:"20px"
+    }}>
+      <FormControl fullWidth
+      >
         <InputLabel id="demo-simple-select-label"
+        sx={{
+          color:'secondary.main'
+        }}
         >Driver</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -32,6 +38,10 @@ function Step1({handleSteps, steps}) {
           value={name}
           label="Driver"
           onChange={handleChange}
+          sx={{
+            bgcolor: "primary.contrastText",
+            margin: "10px"
+          }}
         >
           <MenuItem value={'Wesley Snipes'}>Wesley Snipes</MenuItem>
           <MenuItem value={'Stephen Dorff'}>Stephen Dorff</MenuItem>
@@ -41,7 +51,7 @@ function Step1({handleSteps, steps}) {
           <MenuItem value={'Udo Kier'}>Udo Kier</MenuItem>
         </Select>
       </FormControl>
-      <Button variant="contained" onClick={()=>{handleConfirm(handleSteps, steps)}} >Confirm</Button>
+      <Button color="secondary" variant="contained" onClick={()=>{handleConfirm(handleSteps, steps)}} >Confirm</Button>
     </Box>
     </>
   )
